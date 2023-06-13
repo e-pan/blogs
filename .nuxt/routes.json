@@ -1,0 +1,65 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_e992a94a"
+  },
+  {
+    "name": "friend",
+    "path": "/friend",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/friend.vue",
+    "chunkName": "pages/friend",
+    "_name": "_20455140"
+  },
+  {
+    "name": "test",
+    "path": "/test",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/test.vue",
+    "chunkName": "pages/test",
+    "_name": "_1d7cabb4"
+  },
+  {
+    "name": "user",
+    "path": "/user",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/user.vue",
+    "chunkName": "pages/user",
+    "_name": "_51f50e6d"
+  },
+  {
+    "name": "article-list",
+    "path": "/article/list",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/article/list.vue",
+    "chunkName": "pages/article/list",
+    "_name": "_4f7a5e8e"
+  },
+  {
+    "name": "openai-chat",
+    "path": "/openai/chat",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/openai/chat.vue",
+    "chunkName": "pages/openai/chat",
+    "_name": "_3d1e86a3"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_aa22f3c0"
+  },
+  {
+    "name": "article-detail",
+    "path": "/article/:detail?",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/article/_detail.vue",
+    "chunkName": "pages/article/_detail",
+    "_name": "_eca49eb6"
+  },
+  {
+    "name": "tag",
+    "path": "/:tag",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/_tag.vue",
+    "chunkName": "pages/_tag",
+    "_name": "_dbd9ed06"
+  }
+]

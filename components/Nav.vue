@@ -33,6 +33,11 @@ export default {
           text: '关于我',
           id: 'about',
           router: '/about'
+        },
+        {
+          text: 'openAi',
+          id: 'openai',
+          router: '/openai/chat'
         }
         // {
         //   text: '后台管理',
