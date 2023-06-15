@@ -7,9 +7,9 @@
           <li
             v-for="(msg, index) of messageList"
             :key="index"
-            :class="{ isSobot: msg.type === 2 }"
+            :class="{ isRobot: msg.type === 2 }"
           >
-            <span>{{ msg.type === 2 ? "sobot" : "你" }}</span>
+            <span>{{ msg.type === 2 ? "Robot" : "你" }}</span>
             <p v-html="msg.msg"></p>
           </li>
         </ul>
@@ -131,7 +131,7 @@ export default {
       flex: 1;
     }
 
-    &.isSobot {
+    &.isRobot {
       flex-direction: row-reverse;
     }
   }
