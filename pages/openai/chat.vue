@@ -4,11 +4,7 @@
     <div class="openai-chat wrap">
       <div class="message-list">
         <ul v-if="messageList.length">
-          <li
-            v-for="(msg, index) of messageList"
-            :key="index"
-            :class="{ isRobot: msg.type === 2 }"
-          >
+          <li v-for="(msg, index) of messageList" :key="index" :class="{ isRobot: msg.type === 2 }">
             <span>{{ msg.type === 2 ? "Robot" : "你" }}</span>
             <p v-html="msg.msg"></p>
           </li>
@@ -17,11 +13,7 @@
       </div>
       <div class="message-send">
         <textarea v-model="content" placeholder="请输入您的问题..."></textarea>
-        <button
-          @click="handleSubmit"
-          :disabled="disabled || !content"
-          :class="{ disabled: disabled || !content }"
-        >
+        <button @click="handleSubmit" :disabled="disabled || !content" :class="{ disabled: disabled || !content }">
           提交
         </button>
       </div>
@@ -34,7 +26,6 @@
 import Nav from "~/components/Nav";
 import Footer from "~/components/Footer";
 import { axiosAjax } from "~/apis";
-import { TDK } from "~/assets/js/e-pan";
 
 export default {
   data() {
@@ -46,17 +37,13 @@ export default {
   },
   head() {
     return {
-      title: "关于我 | 你幸福？嗯，我姓“付”",
+      title: "付仲阔博客 | Chat GPT",
       meta: [
-        // 为了避免子组件中的meta标签不能正确覆盖父组件中相同的标签而产生重复的现象，建议利用 hid 键为meta标签配一个唯一的标识编号。请阅读关于 vue-meta 的更多信息。
         {
-          // hid: 'hid  hide ',
-          // name: 'name name',
-          // conntent: 'content content',
-          description: TDK.description,
+          description: 'OpenAI, GPT-3, GPT-4, 人工智能, 人工智能聊天机器人, 人工智能聊天, 人工智能聊天室, 人工智能聊天软件, 人工智能聊天网站, 人工智能聊天机器人软件, 人工智能聊天机器人网站, 人工智能聊天机器人软件下载, 人工智能聊天机器人软件免费下载, 人工智能聊天机器人软件下载免费, 人工智能聊天机器人软件下载安装, 人工智能聊天机器人软件下载安装免费, 人工智能聊天机器人软件下载安装免费版, 人工智能聊天机器人软件下载安装免费版官网, 人工智能聊天机器人软件下载安装免费版官网下载, 人工智能聊天机器人软件下载安装免费版官网下载安装, 人工智能聊天机器人软件下载安装免费版官网下载安装免费, 人工智能聊天机器人软件下载安装免费版官网下载安装免费版, 人工智能聊天机器人软件下载安装免费版官网下载安装免费版官网, 人工智能聊天机器人软件下载安装免费版官网下载安装免费版官网下载, 人工智能聊天机器人软件下载安装免费版官网下载安装免费版官网下载安装, 人工智能聊天机器人软件下载安装免费版官网下载安',
         },
         {
-          keywords: TDK.keywords,
+          keywords: 'OpenAI, GPT-3, GPT-4, 人工智能, 人工智能聊天机器人, 人工智能聊天, 人工智能聊天室',
         },
       ],
     };
@@ -72,37 +59,38 @@ export default {
         msg: this.content,
       });
       this.disabled = true;
-        axiosAjax("/openai/chat", { content: this.content }).then((res) => {
-          if (res.code === 200) {
-            this.messageList.push({
-              type: 2,
-              msg: res.data
-            });
-            this.saveCatch(this.messageList)
-            this.clearCatch()
-          } else {
-              this.clearCatch()
-          }
-        });
+      axiosAjax("/openai/chat", { content: this.content }).then((res) => {
+        if (res.code === 200) {
+          this.messageList.push({
+            type: 2,
+            msg: res.data
+          });
+          this.saveCatch(this.messageList)
+          this.clearCatch()
+        } else {
+          this.clearCatch()
+        }
+      });
     },
     clearCatch() {
       this.disabled = false;
       this.content = "";
     },
     saveCatch(msg) {
-        window.sessionStorage.setItem("chatHistory", JSON.stringify(msg))
+      window.sessionStorage.setItem("chatHistory", JSON.stringify(msg))
     }
   },
-  created: function () {},
+  created: function () { },
   mounted: function () {
     this.messageList = window.sessionStorage.getItem('chatHistory') ? JSON.parse(window.sessionStorage.getItem('chatHistory')) : []
   },
-  filter: function () {},
+  filter: function () { },
 };
 </script>
 
 <style lang="less" scoped>
 @import url("./../../assets/less/mixin.less");
+
 .message-list {
   margin: 20px;
   background: #f5f5f5;
@@ -126,6 +114,7 @@ export default {
       text-align: center;
       border-radius: 50%;
     }
+
     p {
       margin: 0 10px;
       flex: 1;
@@ -136,15 +125,17 @@ export default {
     }
   }
 }
+
 .message-list-empty {
-    font-size: 30px;
-    font-weight: bold;
-    color: @main-color;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 100px 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: @main-color;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 100px 0;
 }
+
 .message-send {
   margin: 20px;
   background: #f5f5f5;
@@ -161,6 +152,7 @@ export default {
     border: 1px solid #ddd;
     border-radius: 5px;
   }
+
   button {
     background: @main-color;
     color: #fff;
@@ -174,7 +166,7 @@ export default {
     cursor: pointer;
 
     &.disabled {
-        cursor: not-allowed;
+      cursor: not-allowed;
     }
   }
 }
