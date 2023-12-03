@@ -21,6 +21,13 @@
     "_name": "_1d7cabb4"
   },
   {
+    "name": "tmkoo",
+    "path": "/tmkoo",
+    "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/tmkoo.vue",
+    "chunkName": "pages/tmkoo",
+    "_name": "_24db5fc0"
+  },
+  {
     "name": "user",
     "path": "/user",
     "component": "/Users/fuzhongkuo/Documents/blog/blogs/pages/user.vue",
