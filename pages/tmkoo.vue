@@ -4,7 +4,7 @@
       <div class="item" v-if="tmkooInfo.tmImg">
         <span class="label">商标图片名：</span
         >
-        <!-- <img :src="http://tmpic.tmkoo.com/" + tmkooInfo.tmImg +"-m" /> -->
+        <img :src="tmkooInfo.tmImgUrl" />
       </div>
       <div class="item" v-if="tmkooInfo.regNo">
         <span class="label">注册号：</span
@@ -126,6 +126,7 @@ export default {
     if (tmkooInfo.code == 200) {
       tmkooInfo = JSON.parse(tmkooInfo.data.json);
     }
+    tmkooInfo.tmImgUrl = `http://tmpic.tmkoo.com/${tmkooInfo.tmImg}-m`
     return { tmkooInfo };
   },
   data() {

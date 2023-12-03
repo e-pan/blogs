@@ -15,3 +15,5 @@ yarn-error.log*
 *.code-workspace
 *.bak
 .history
+*.nuxt
+.nuxt
