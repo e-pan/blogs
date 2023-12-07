@@ -121,7 +121,7 @@
         ><span class="content">{{
           tmkooInfo.legalStatus === "YZC"
             ? "已注册"
-            : data.legalStatus === "YCS"
+            : tmkooInfo.legalStatus === "YCS"
             ? "已初审"
             : "未续展"
         }}</span>
