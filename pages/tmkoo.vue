@@ -126,6 +126,23 @@
             : "未续展"
         }}</span>
       </div>
+      <div class="item" v-if="tmkooInfo.gonggaos && tmkooInfo.gonggaos.length">
+        <span class="label">商标公告：</span>
+        <div class="content goods-items">
+          <p
+            class="good-item"
+            v-for="(item, index) of tmkooInfo.gonggaos"
+            :key="index"
+          >
+            {{ item.ggDate }} 第{{ item.ggQihao }}期《{{ item.ggName }}》 第{{
+              item.ggPage
+            }}页
+            <a target="_blank" :href="item.url + '' + '&vcode=' + item.vcode"
+              >查看</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -190,6 +207,9 @@ b.content {
   b {
     color: #ca4300;
     display: block;
+  }
+  a {
+    color: #ca4300;
   }
 }
 </style>
