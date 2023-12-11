@@ -1,9 +1,6 @@
 import axios from 'axios'
 
 var host = 'https://api.fuzhongkuo.com'
-// const host = process.env.NODE_ENV !== 'development' ? 'http://api.fuzhongkuo.com' : 'http://127.0.0.1:4001'
-console.log('host', host)
-
 const axiosAjax = (url, params, option) => {
   return axios({
       method: option && option.method || 'post',

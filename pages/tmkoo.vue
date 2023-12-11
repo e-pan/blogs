@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="postion">
+      数据来源：{{ source === 'local' ? 'SGS' : '标库网' }}
+    </div>
     <div class="items">
       <div class="item" v-if="tmkooInfo.tmImg">
         <span class="label">商标图片名：</span>
@@ -148,7 +151,7 @@
 </template>
 
 <script>
-import { axiosAjax } from "~/apis";
+import { axiosAjax } from "~/apis/tmkoo";
 export default {
   async asyncData(context) {
     console.log(context.query);
@@ -157,10 +160,13 @@ export default {
       tmkooInfo = JSON.parse(tmkooInfo.data.json);
     }
     tmkooInfo.tmImgUrl = `http://tmpic.tmkoo.com/${tmkooInfo.tmImg}-m`;
-    return { tmkooInfo };
+    const source = context.query.source
+    return { tmkooInfo, source };
   },
   data() {
-    return {};
+    return {
+      source: ''
+    };
   },
   head() {
     return {
@@ -175,6 +181,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.postion {
+  top: 10px;
+  right: 10px;
+  position: fixed;
+}
 .items {
   padding: 20px;
   font-size: 14px;
