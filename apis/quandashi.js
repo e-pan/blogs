@@ -1,6 +1,5 @@
 import axios from 'axios'
-
-var host = 'https://api.fuzhongkuo.com'
+var host = 'http://121.199.78.82:5000'
 const axiosAjax = (url, params, option) => {
   return axios({
       method: option && option.method || 'post',
