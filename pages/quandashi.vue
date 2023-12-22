@@ -5,87 +5,87 @@
     </div>
     <div class="items">
       <!-- <h1>基础信息</h1> -->
-      <div class="item" v-if="dataInfo.imageInfo">
+      <div class="item">
         <span class="label">商标图片名：</span>
         <img :src="dataInfo.imageInfo.original_logo" />
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.dataId">
+      <div class="item">
         <span class="label">注册号：</span
         ><span class="content" id="dataId">{{ dataInfo.baseInfo.dataId }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.typeCode">
+      <div class="item">
         <span class="label">商标类别：</span
         ><span class="content">{{ dataInfo.baseInfo.typeCode }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.name">
+      <div class="item">
         <span class="label">商标名：</span
         ><b class="content">{{ dataInfo.baseInfo.name }}</b>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.appDate">
+      <div class="item">
         <span class="label">商标申请日期：</span
         ><span class="content">{{ dataInfo.baseInfo.appDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.applicant">
+      <div class="item">
         <span class="label">申请人中文：</span
         ><b class="content">{{ dataInfo.baseInfo.applicant }}</b>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.address">
+      <div class="item">
         <span class="label">申请人地址中文：</span
         ><span class="content">{{ dataInfo.baseInfo.address }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.applicantShare_1">
+      <div class="item">
         <span class="label">共有申请人1：</span
         ><span class="content">{{ dataInfo.baseInfo.applicantShare_1 }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.applicantShare_2">
+      <div class="item">
         <span class="label">共有申请人2：</span
         ><span class="content">{{ dataInfo.baseInfo.applicantShare_2 }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.enApplicant">
+      <div class="item">
         <span class="label">申请人英文：</span
         ><span class="content">{{ dataInfo.baseInfo.enApplicant }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.enAddress">
+      <div class="item">
         <span class="label">申请人地址英文：</span
         ><span class="content">{{ dataInfo.baseInfo.enAddress }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.noticeIssue">
+      <div class="item">
         <span class="label">初审公告期号：</span
         ><span class="content">{{ dataInfo.baseInfo.noticeIssue }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.registerIssue">
+      <div class="item">
         <span class="label">注册公告期号：</span
         ><span class="content">{{ dataInfo.baseInfo.registerIssue }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.privateStartDate">
+      <div class="item">
         <span class="label">专用权期限开始日期：</span
         ><span class="content">{{ dataInfo.baseInfo.privateStartDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.PrivateEndDate">
+      <div class="item">
         <span class="label">专用权期限结束日期：</span
         ><span class="content">{{ dataInfo.baseInfo.PrivateEndDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.agency">
+      <div class="item">
         <span class="label">代理机构：</span
         ><span class="content">{{ dataInfo.baseInfo.agency }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.processName">
+      <div class="item">
         <span class="label">法律状态：</span
         ><span class="content">{{ dataInfo.baseInfo.processName }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.processCode3">
+      <div class="item">
         <span class="label">法律状态编号：</span
         ><span class="content">{{ dataInfo.baseInfo.processCode3 }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.createDate">
+      <div class="item">
         <span class="label">创建日期：</span
         ><span class="content">{{ dataInfo.baseInfo.createDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.brandPrice">
+      <div class="item">
         <span class="label">商标价格：</span
         ><span class="content">{{ dataInfo.baseInfo.brandPrice }}</span>
       </div>
-      <div class="item" v-if="dataInfo.baseInfo.tmType">
+      <div class="item">
         <span class="label">商标类型：</span
         ><span class="content">{{ dataInfo.baseInfo.tmType }}</span>
       </div>
