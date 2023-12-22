@@ -1,5 +1,5 @@
 import axios from 'axios'
-var host = 'http://121.199.78.82:5000'
+var host = 'http://47.96.180.232:4001'
 const axiosAjax = (url, params, option) => {
   return axios({
       method: option && option.method || 'post',

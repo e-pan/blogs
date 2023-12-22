@@ -4,168 +4,137 @@
       数据来源：{{ source === 'local' ? 'SGS' : '标库网' }}
     </div>
     <div class="items">
-      <div class="item" v-if="dataInfo.tmLogoUrl">
+      <div class="item" v-if="tmkooInfo.tmImg">
         <span class="label">商标图片名：</span>
-        <img :src="dataInfo.tmLogoUrl" />
+        <img :src="tmkooInfo.tmImgUrl" />
       </div>
-      <div class="item" v-if="dataInfo.regNo">
+      <div class="item" v-if="tmkooInfo.regNo">
         <span class="label">注册号：</span
-        ><span class="content" id="regNo">{{ dataInfo.regNo }}</span>
+        ><span class="content" id="regNo">{{ tmkooInfo.regNo }}</span>
       </div>
-      <div class="item" v-if="dataInfo.intCls">
+      <div class="item" v-if="tmkooInfo.intCls">
         <span class="label">国际分类：</span
-        ><span class="content">{{ dataInfo.intCls }}</span>
+        ><span class="content">{{ tmkooInfo.intCls }}</span>
       </div>
-      <div class="item" v-if="dataInfo.tmName">
+      <div class="item" v-if="tmkooInfo.tmName">
         <span class="label">商标名：</span
-        ><b class="content">{{ dataInfo.tmName }}</b>
+        ><b class="content">{{ tmkooInfo.tmName }}</b>
       </div>
-      <div class="item" v-if="dataInfo.appDate">
+      <div class="item" v-if="tmkooInfo.appDate">
         <span class="label">申请日期：</span
-        ><span class="content">{{ dataInfo.appDate }}</span>
+        ><span class="content">{{ tmkooInfo.appDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.applicantCn">
+      <div class="item" v-if="tmkooInfo.applicantCn">
         <span class="label">申请人中文：</span
-        ><b class="content">{{ dataInfo.applicantCn }}</b>
+        ><b class="content">{{ tmkooInfo.applicantCn }}</b>
       </div>
-      <div class="item" v-if="dataInfo.idCardNo">
+      <div class="item" v-if="tmkooInfo.idCardNo">
         <span class="label">申请人身份证号：</span
-        ><span class="content">{{ dataInfo.idCardNo }}</span>
+        ><span class="content">{{ tmkooInfo.idCardNo }}</span>
       </div>
-      <div class="item" v-if="dataInfo.address">
+      <div class="item" v-if="tmkooInfo.addressCn">
         <span class="label">申请人地址中文：</span
-        ><span class="content">{{ dataInfo.address }}</span>
+        ><span class="content">{{ tmkooInfo.addressCn }}</span>
       </div>
-      <div class="item" v-if="dataInfo.applicantOther1">
+      <div class="item" v-if="tmkooInfo.applicantOther1">
         <span class="label">共有申请人1：</span
-        ><span class="content">{{ dataInfo.applicantOther1 }}</span>
+        ><span class="content">{{ tmkooInfo.applicantOther1 }}</span>
       </div>
-      <div class="item" v-if="dataInfo.applicantOther2">
+      <div class="item" v-if="tmkooInfo.applicantOther2">
         <span class="label">共有申请人2：</span
-        ><span class="content">{{ dataInfo.applicantOther2 }}</span>
+        ><span class="content">{{ tmkooInfo.applicantOther2 }}</span>
       </div>
-      <div class="item" v-if="dataInfo.enApplicant">
+      <div class="item" v-if="tmkooInfo.applicantEn">
         <span class="label">申请人英文：</span
-        ><span class="content">{{ dataInfo.enApplicant }}</span>
+        ><span class="content">{{ tmkooInfo.applicantEn }}</span>
       </div>
-      <div class="item" v-if="dataInfo.addressEn">
+      <div class="item" v-if="tmkooInfo.addressEn">
         <span class="label">申请人地址英文：</span
-        ><span class="content">{{ dataInfo.addressEn }}</span>
+        ><span class="content">{{ tmkooInfo.addressEn }}</span>
       </div>
-      <div class="item" v-if="dataInfo.agency">
+      <div class="item" v-if="tmkooInfo.agent">
         <span class="label">代理公司：</span
-        ><span class="content">{{ dataInfo.agency }}</span>
+        ><span class="content">{{ tmkooInfo.agent }}</span>
       </div>
-      <div class="item" v-if="dataInfo.announcementIssue">
+      <div class="item" v-if="tmkooInfo.announcementIssue">
         <span class="label">初审公告期号：</span
-        ><span class="content">{{ dataInfo.announcementIssue }}</span>
+        ><span class="content">{{ tmkooInfo.announcementIssue }}</span>
       </div>
-      <div class="item" v-if="dataInfo.announcementDate">
+      <div class="item" v-if="tmkooInfo.announcementDate">
         <span class="label">初审公告日期：</span
-        ><span class="content">{{ dataInfo.announcementDate }}</span>
+        ><span class="content">{{ tmkooInfo.announcementDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.regIssue">
+      <div class="item" v-if="tmkooInfo.regIssue">
         <span class="label">注册公告期号：</span
-        ><span class="content">{{ dataInfo.regIssue }}</span>
+        ><span class="content">{{ tmkooInfo.regIssue }}</span>
       </div>
-      <div class="item" v-if="dataInfo.regDate">
+      <div class="item" v-if="tmkooInfo.regDate">
         <span class="label">注册公告日期：</span
-        ><span class="content">{{ dataInfo.regDate }}</span>
+        ><span class="content">{{ tmkooInfo.regDate }}</span>
       </div>
-      <div class="item" v-if="dataInfo.privateDate">
+      <div class="item" v-if="tmkooInfo.privateDate">
         <span class="label">专用权期限：</span
-        ><b class="content">{{ dataInfo.privateDate }}</b>
+        ><b class="content">{{ tmkooInfo.privateDate }}</b>
       </div>
-      <div class="item" v-if="dataInfo.category">
+      <div class="item" v-if="tmkooInfo.category">
         <span class="label">商标类型：</span
-        ><span class="content">{{ dataInfo.category }}</span>
+        ><span class="content">{{ tmkooInfo.category }}</span>
       </div>
-      <div class="item" v-if="dataInfo.hqzdrq">
+      <div class="item" v-if="tmkooInfo.hqzdrq">
         <span class="label">后期指定日期：</span
-        ><span class="content">{{ dataInfo.hqzdrq }}</span>
+        ><span class="content">{{ tmkooInfo.hqzdrq }}</span>
       </div>
-      <div class="item" v-if="dataInfo.gjzcrq">
+      <div class="item" v-if="tmkooInfo.gjzcrq">
         <span class="label">国际注册日期：</span
-        ><span class="content">{{ dataInfo.gjzcrq }}</span>
+        ><span class="content">{{ tmkooInfo.gjzcrq }}</span>
       </div>
-      <div class="item" v-if="dataInfo.yxqrq">
+      <div class="item" v-if="tmkooInfo.yxqrq">
         <span class="label">优先权日期：</span
-        ><span class="content">{{ dataInfo.yxqrq }}</span>
+        ><span class="content">{{ tmkooInfo.yxqrq }}</span>
       </div>
-      <div class="item" v-if="dataInfo.color">
+      <div class="item" v-if="tmkooInfo.color">
         <span class="label">指定颜色：</span
-        ><span class="content">{{ dataInfo.color }}</span>
+        ><span class="content">{{ tmkooInfo.color }}</span>
       </div>
-      <div class="item" v-if="dataInfo.year">
-        <span class="label">申请年份：</span
-        ><span class="content">{{ dataInfo.year }}</span>
-      </div>
-      <div class="item" v-if="dataInfo.regIssue">
-        <span class="label">注册公告期号：</span
-        ><span class="content">{{ dataInfo.regIssue }}</span>
-      </div>
-      <div class="item" v-if="dataInfo.announcementDate">
-        <span class="label">初审公告日期：</span
-        ><span class="content">{{ dataInfo.announcementDate }}</span>
-      </div>
-      <div class="item" v-if="dataInfo.announcementIssue">
-        <span class="label">初审公告期号：</span
-        ><span class="content">{{ dataInfo.announcementIssue }}</span>
-      </div>
-      <div class="item" v-if="dataInfo.applicantShare">
-        <span class="label">共享申请人：</span
-        ><span class="content">{{ dataInfo.applicantShare }}</span>
-      </div>
-      <div class="item" v-if="dataInfo.privateEndDate">
-        <span class="label">商标专用权日期开始：</span
-        ><span class="content">{{ dataInfo.privateEndDate }}</span>
-      </div>
-      <div class="item" v-if="dataInfo.priorityDate">
-        <span class="label">优先权日期，国际注册相关：</span
-        ><span class="content">{{ dataInfo.priorityDate }}</span>
-      </div>
-      
-
-      
-      <div class="item" v-if="dataInfo.goods && dataInfo.goods.length">
+      <div class="item" v-if="tmkooInfo.goods && tmkooInfo.goods.length">
         <span class="label">使用商品：</span>
         <div class="content goods-items">
           <div
             class="good-item"
-            v-for="(good, index) of dataInfo.goods"
+            v-for="(good, index) of tmkooInfo.goods"
             :key="index"
           >
             {{ good.goodsName }}({{ good.goodsCode }})
           </div>
         </div>
       </div>
-      <div class="item" v-if="dataInfo.flow && dataInfo.flow.length">
+      <div class="item" v-if="tmkooInfo.flow && tmkooInfo.flow.length">
         <span class="label">商标流程：</span>
         <div class="content goods-items">
           <b
             class="good-item"
-            v-for="(flow, index) of dataInfo.flow"
+            v-for="(flow, index) of tmkooInfo.flow"
             :key="index"
             >{{ flow.flowDate }} : {{ flow.flowName }}</b
           >
         </div>
       </div>
-      <div class="item" v-if="dataInfo.legalStatus">
+      <div class="item" v-if="tmkooInfo.legalStatus">
         <span class="label">法律状态：</span
         ><span class="content">{{
-          dataInfo.legalStatus === "YZC"
+          tmkooInfo.legalStatus === "YZC"
             ? "已注册"
-            : dataInfo.legalStatus === "YCS"
+            : tmkooInfo.legalStatus === "YCS"
             ? "已初审"
             : "未续展"
         }}</span>
       </div>
-      <div class="item" v-if="dataInfo.gonggaos && dataInfo.gonggaos.length">
+      <div class="item" v-if="tmkooInfo.gonggaos && tmkooInfo.gonggaos.length">
         <span class="label">商标公告：</span>
         <div class="content goods-items">
           <p
             class="good-item"
-            v-for="(item, index) of dataInfo.gonggaos"
+            v-for="(item, index) of tmkooInfo.gonggaos"
             :key="index"
           >
             {{ item.ggDate }} 第{{ item.ggQihao }}期《{{ item.ggName }}》 第{{
@@ -182,19 +151,17 @@
 </template>
 
 <script>
-import { axiosAjax } from "~/apis/quandashi";
+import { axiosAjax } from "~/apis/tmkoo";
 export default {
   async asyncData(context) {
     console.log(context.query);
-    let dataInfo = await axiosAjax("/trademark/quandashi/query", { id: context.query.id });
-    console.log(dataInfo, '-------')
-    debugger
-    if (dataInfo.code == 200) {
-      dataInfo = dataInfo.data
+    let tmkooInfo = await axiosAjax("/tmkoo/detail", { id: context.query.id });
+    if (tmkooInfo.code == 200) {
+      tmkooInfo = JSON.parse(tmkooInfo.data.json);
     }
-    dataInfo.tmImgUrl = `http://tmpic.tmkoo.com/${dataInfo.tmImg}-m`;
+    tmkooInfo.tmImgUrl = `http://tmpic.tmkoo.com/${tmkooInfo.tmImg}-m`;
     const source = context.query.source
-    return { dataInfo, source };
+    return { tmkooInfo, source };
   },
   data() {
     return {
@@ -203,7 +170,7 @@ export default {
   },
   head() {
     return {
-      title: "权大师",
+      title: "标库网",
     };
   },
   methods: {},
