@@ -124,12 +124,13 @@
       <div class="item" v-if="dataInfo.lastFlow">
         <span class="label">商标流程：</span>
         <div class="content goods-items">
-          <b
+          <!-- <b
             class="good-item"
             v-for="(flow, index) of dataInfo.lastFlow"
             :key="index"
             >{{ flow.lastTime }} : {{ flow.name }}</b
-          >
+          > -->
+          <b class="good-item">{{ dataInfo.lastFlow.lastTime }} : {{ dataInfo.lastFlow.name }}</b>
         </div>
       </div>
     </div>
