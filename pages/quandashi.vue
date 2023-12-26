@@ -89,6 +89,10 @@
         <span class="label">商标类型：</span
         ><span class="content">{{ dataInfo.baseInfo.tmType }}</span>
       </div>
+      <div class="item">
+        <span class="label">商标形式：</span
+        ><span class="content">{{ dataInfo.baseInfo.tmNameForm }}</span>
+      </div>
       <!-- <h1>商标公告</h1> -->
       <div class="item" v-if="dataInfo.noticeInfo && dataInfo.noticeInfo.length">
         <span class="label">商标公告：</span>
