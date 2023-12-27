@@ -63,7 +63,7 @@
       </div>
       <div class="item">
         <span class="label">专用权期限结束日期：</span
-        ><span class="content">{{ dataInfo.baseInfo.PrivateEndDate }}</span>
+        ><span class="content">{{ dataInfo.baseInfo.privateEndDate }}</span>
       </div>
       <div class="item">
         <span class="label">代理机构：</span
