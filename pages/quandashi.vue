@@ -87,7 +87,7 @@
       </div>
       <div class="item">
         <span class="label">商标类型：</span
-        ><span class="content">{{ dataInfo.baseInfo.tmType }}</span>
+        ><span class="content">{{ dataInfo.baseInfo.tmType == '0' ? '文字' : good.status == 1 ? '图形' : '文字及图'}}</span>
       </div>
       <!-- <h1>商标公告</h1> -->
       <div class="item" v-if="dataInfo.noticeInfo && dataInfo.noticeInfo.length">
@@ -124,13 +124,13 @@
       <div class="item" v-if="dataInfo.lastFlow">
         <span class="label">商标流程：</span>
         <div class="content goods-items">
-          <!-- <b
+          <b
             class="good-item"
             v-for="(flow, index) of dataInfo.lastFlow"
             :key="index"
             >{{ flow.lastTime }} : {{ flow.name }}</b
-          > -->
-          <b class="good-item">{{ dataInfo.lastFlow.lastTime }} : {{ dataInfo.lastFlow.name }}</b>
+          >
+          <!-- <b class="good-item">{{ dataInfo.lastFlow.lastTime }} : {{ dataInfo.lastFlow.name }}</b> -->
         </div>
       </div>
     </div>
