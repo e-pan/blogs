@@ -87,11 +87,11 @@
       </div>
       <div class="item">
         <span class="label">商标类型：</span
-        ><span class="content">{{ dataInfo.baseInfo.tmType == '0' ? '文字' : good.status == 1 ? '图形' : '文字及图'}}</span>
+        ><span class="content">{{ dataInfo.baseInfo.tmType }}</span>
       </div>
       <div class="item">
         <span class="label">商标形式：</span
-        ><span class="content">{{ dataInfo.baseInfo.tmNameForm }}</span>
+        ><span class="content">{{ dataInfo.baseInfo.tmNameForm == '0' ? '文字' : dataInfo.baseInfo.tmNameForm == 1 ? '图形' : '文字及图'  }}</span>
       </div>
       <!-- <h1>商标公告</h1> -->
       <div class="item" v-if="dataInfo.noticeInfo && dataInfo.noticeInfo.length">
