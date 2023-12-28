@@ -11,7 +11,7 @@
       </div>
       <div class="item">
         <span class="label">注册号：</span
-        ><span class="content" id="dataId">{{ dataInfo.baseInfo.dataId }}</span>
+        ><span class="content" id="regNo">{{ dataInfo.baseInfo.dataId }}</span>
       </div>
       <div class="item">
         <span class="label">商标类别：</span
