@@ -59,11 +59,11 @@
       </div>
       <div class="item">
         <span class="label">专用权期限开始日期：</span
-        ><span class="content">{{ dataInfo.baseInfo.privateStartDate }}</span>
+        ><b class="content">{{ dataInfo.baseInfo.privateStartDate }}</b>
       </div>
       <div class="item">
         <span class="label">专用权期限结束日期：</span
-        ><span class="content">{{ dataInfo.baseInfo.privateEndDate }}</span>
+        ><b class="content">{{ dataInfo.baseInfo.privateEndDate }}</b>
       </div>
       <div class="item">
         <span class="label">代理机构：</span
@@ -71,7 +71,7 @@
       </div>
       <div class="item">
         <span class="label">法律状态：</span
-        ><span class="content">{{ dataInfo.baseInfo.processName }}</span>
+        ><b class="content">{{ dataInfo.baseInfo.processName }}</b>
       </div>
       <div class="item">
         <span class="label">法律状态编号：</span
